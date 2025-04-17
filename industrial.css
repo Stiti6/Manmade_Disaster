@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('background_industry.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+
+header {
+  text-align: center;
+  padding: 10px;
+  background: rgba(0,0,0,0.5);
+  font-size: 1.5rem;
+  height: 200px;
+}
+
+#datetime {
+  font-size: 1rem;
+  margin-top: 5px;
+  color: #ccc;
+}
+
+footer {
+  text-align: center;
+  background: rgba(0,0,0,0.5);
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 20px;
+  height: calc(100vh - 160px);
+}
+
+.left-panel, .right-panel {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 20px;
+  width: 30%;
+  height: 400px;
+}
+
+.middle-panel {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+button {
+  background: #00d1ff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.circle {
+  margin-top: 20px;
+  width: 150px;
+  height: 150px;
+  border: 6px solid gray;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: border-color 0.5s ease;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+#disasterList li {
+  margin-bottom: 8px;
+}
+
+#disasterList li::before {
+  content: "⚠️ ";
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Industrial Disaster Monitoring System</title>
+  <link rel="stylesheet" href="industrial.css">
+</head>
+<body>
+  <header>
+    <h1>Odisha Industrial Disaster Dashboard</h1>
+    <div id="datetime"></div>
+  </header>
+
+  <div class="container">
+    <div class="left-panel">
+      <h2>Past 50 Years Disaster Records</h2>
+      <select id="filterSelect">
+        <option value="all">All</option>
+      </select>
+      <ul id="disasterList"></ul>
+      <div id="stats"></div>
+    </div>
+
+    <div class="right-panel">
+      <h2>Current Industrial Safety Status</h2>
+      <div class="circle" id="circle">
+        <span id="safetyPercent">--%</span>
+        <p>Status: <span id="safetyLabel">--</span></p>
+      </div>
+    </div>
+
+    <div class="middle-panel">
+      <h2>Safety Checker</h2>
+      <button onclick="runSafetyCheck()">Run Safety Check</button>
+    </div>
+  </div>
+
+  <footer>
+    Odisha Industrial Monitoring Authority © 2025
+  </footer>
+
+  <audio id="alarmSound" src="beep-warning-6387.mp3"></audio>
+  <script src="industrial.js"></script>
+</body>
+</html>
